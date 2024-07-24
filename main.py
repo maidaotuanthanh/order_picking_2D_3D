@@ -10,10 +10,10 @@ def simulate_batch(n1, n2, y_low, y_high, origin_loc, df_orderlines):
     list_wid, list_dst, list_route, list_ord = [], [], [], []
     # Test several values of orders per wave
     for orders_number in range(1, 10):
-    # orders_number = 1
+        # orders_number = 1
         simulation = Simulation(y_low, y_high, origin_loc, orders_number, df_orderlines)
         list_wid, list_dst, list_route, list_ord, distance_route = simulation.simulation_wave(list_wid, list_dst,
-                                                                                          list_route, list_ord)
+                                                                                              list_route, list_ord)
         print("Total distance covered for {} orders/wave: {:,} m".format(orders_number, distance_route))
 
     # By Wave
