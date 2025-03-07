@@ -112,11 +112,11 @@ def main():
     origin_loc = (0, 0)  # Ensure this is correctly formatted as a tuple
     orders_number = 9
     # Example DataFrame, replace with actual data
-    orderlines = pd.read_csv('input/df_lines.csv')
+    orderlines = pd.read_csv('input/df_lines1.csv')
 
     df_waves = simulate_batch(y_low, y_high, origin_loc, orderlines)
     # print(df_waves)
-    df_waves.to_csv('output/output_OSACO.csv', index=False)
+    df_waves.to_csv('output/output_OSACO1.csv', index=False)
 
 if __name__ == "__main__":
     main()

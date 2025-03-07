@@ -11,7 +11,7 @@ class RouteCalculator:
         self.max_iterations = max_iterations
         # Initialize parameters for OSACO (these can be tuned or optimized)
         self.alpha = 2.0  # Influence of pheromone
-        self.beta = 5.0  # Influence of heuristic value (1/distance)
+        self.beta = 5.0  # Influence of heuristic value (1/distan ce)
         self.rho = 0.1  # Pheromone evaporation rate
         self.Q = 100  # Pheromone deposit factor
 
