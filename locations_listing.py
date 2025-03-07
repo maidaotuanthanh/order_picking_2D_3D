@@ -4,12 +4,12 @@ import itertools
 
 
 class LocationLister:
-    def __init__(self, df_orderlines):
-        self.df_orderlines = df_orderlines
+    def __init__(self, orderlines):
+        self.orderlines = orderlines
 
     def get_locations_for_wave(self, wave_id):
         '''Getting storage locations to cover for a wave of orders'''
-        df = self.df_orderlines[self.df_orderlines.WaveID == wave_id]
+        df = self.orderlines[self.orderlines.WaveID == wave_id]
         # Create coordinates listing
         list_locs = list(df['Coord'].apply(lambda t: literal_eval(t)).values)
         list_locs.sort()
